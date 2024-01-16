@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled';
+import { auroraTheme, deepTheme, urbanTheme, nightTheme } from '../../components/theme/theme';
+
 
 const ThemeContainer = styled.div`
     background-color: ${props => props.theme.palette.background.main};    ;
@@ -19,6 +21,8 @@ const CardsContainer = styled.div`    ;
     flex-direction: row;
     gap: 5rem;
     flex-wrap: wrap;
+
+
 `;
 
 const CardsThemeSelector = styled.div`
@@ -37,7 +41,14 @@ const CardsThemeSelector = styled.div`
     &:hover {
       border: 3px solid ${props => props.theme.palette.border.secondary};
     }
+
+    h2 {
+      font-size: 2rem;
+      color: ${props => props.theme.palette.txt.secondary};
+
+    }
 `;
+
 
 const AuroraPreviewContainer = styled.div`
     background-color: ${props => props.theme.palette.background.card};    
@@ -226,11 +237,16 @@ const ButtonContainer = styled.button`
 `;
 
 
-const ThemeSelect = () => {
+const ThemeSelect = ({ changeTheme  }) => {
+  const handleThemeChange = (theme) => {
+    changeTheme(theme);
+  };
+
   return (
     <ThemeContainer>
       <CardsContainer>
         <CardsThemeSelector>
+            <h2>Aurora Boreau</h2>
           <AuroraPreviewContainer>
             <div className="theme-colors" id="aurora1"></div>
             <div className="theme-colors" id="aurora2"></div>
@@ -238,9 +254,10 @@ const ThemeSelect = () => {
             <div className="theme-colors" id="aurora4"></div>
             <div className="theme-colors" id="aurora5"></div>
           </AuroraPreviewContainer>
-          <ButtonContainer>Alterar Tema</ButtonContainer>
+          <ButtonContainer onClick={() => handleThemeChange(auroraTheme)}>Alterar Tema</ButtonContainer>
         </CardsThemeSelector>
         <CardsThemeSelector>
+            <h2>Deep Ocean</h2>
           <DeepPreviewContainer>
             <div className="theme-colors" id="DO1"></div>
             <div className="theme-colors" id="DO2"></div>
@@ -248,9 +265,10 @@ const ThemeSelect = () => {
             <div className="theme-colors" id="DO4"></div>
             <div className="theme-colors" id="DO5"></div>
           </DeepPreviewContainer>
-          <ButtonContainer>Alterar Tema</ButtonContainer>
+          <ButtonContainer onClick={() => handleThemeChange(deepTheme)}>Alterar Tema</ButtonContainer>
         </CardsThemeSelector>
         <CardsThemeSelector>
+            <h2>Urban Modern</h2>
           <UrbanPreviewContainer>
             <div className="theme-colors" id="urban1"></div>
             <div className="theme-colors" id="urban2"></div>
@@ -258,9 +276,10 @@ const ThemeSelect = () => {
             <div className="theme-colors" id="urban4"></div>
             <div className="theme-colors" id="urban5"></div>
           </UrbanPreviewContainer>
-          <ButtonContainer>Alterar Tema</ButtonContainer>
+          <ButtonContainer onClick={() => handleThemeChange(urbanTheme)}>Alterar Tema</ButtonContainer>
         </CardsThemeSelector>
         <CardsThemeSelector>
+            <h2>Night</h2>
           <NightPreviewContainer>
             <div className="theme-colors" id="night1"></div>
             <div className="theme-colors" id="night2"></div>
@@ -268,7 +287,7 @@ const ThemeSelect = () => {
             <div className="theme-colors" id="night4"></div>
             <div className="theme-colors" id="night5"></div>
           </NightPreviewContainer>
-          <ButtonContainer>Alterar Tema</ButtonContainer>
+          <ButtonContainer onClick={() => handleThemeChange(nightTheme)}>Alterar Tema</ButtonContainer>
         </CardsThemeSelector>
       </CardsContainer>
     </ThemeContainer>
