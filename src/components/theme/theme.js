@@ -37,13 +37,16 @@ export const auroraTheme = createTheme({
         temanight5: '#a364b8',
     },
     border: {
-        main: '#70b8c8'
+        primary: '#308890',
+        secondary: '#70b8c8'
     },
     txt: {
         main: '#fff',
         select: '#70b8c8',
         black: '#000',
         white: '#fff',
+        button: '#fff',
+        buttonh: '#0E1518',
     }
   },
 });
@@ -86,13 +89,16 @@ export const deepTheme = createTheme({
         temanight5: '#a364b8',
     },
     border: {
-        main: '#f0ebd8'
+        primary: '#748cab',
+        secondary: '#f0ebd8'
     },
     txt: {
         main: '#f0ebd8',
         select: '#748cab',
         black: '#000',
         white: '#fff',
+        button: '#0d1321',
+        buttonh: '#f0ebd8',
     }
   },
 });
@@ -140,10 +146,12 @@ export const urbanTheme = createTheme({
         secondary: '#e48f0f'
     },
     txt: {
-        primary: '#a06a25',
-        secondary: '#e48f0f',
+        main: '#8a9c9b',
+        select: '#e48f0f',
         black: '#000',
         white: '#fff',
+        button: '#fff',
+        buttonh: '#030609',
     }
   },
 });
@@ -156,8 +164,8 @@ export const nightTheme = createTheme({
     background: {
         main: '#191622',
         card: '#0b1333',
-        button: '#3a317d',
-        buttonHover: '#5344a0',
+        button: '#191622',
+        buttonHover: '#a364b8',
 
         //night
         temanight1: '#0b1333',
@@ -190,10 +198,12 @@ export const nightTheme = createTheme({
         secondary: '#a364b8',
     },
     txt: {
-        primary: '#5344a0',
-        secondary: '#a364b8',
+        main: '#5344a0',
+        select: '#a364b8',
         black: '#000',
         white: '#fff',
+        button: '#3a317d',
+        buttonh: '#191622',
     }
   },
 });

@@ -11,7 +11,6 @@ const SidebarContainer = styled.div`
 
     ul {
         margin-top: 2rem;
-
         li {
             margin: .5rem;
         }
@@ -25,13 +24,13 @@ const SidebarContainer = styled.div`
 
 const StyledNavLink = styled(NavLink)`
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 1rem;
     margin-top: 1rem;
-    color: ${props => props.theme.palette.txt.primary};
+    color: ${props => props.theme.palette.txt.main};
     
     &:hover {
-        color: ${props => props.theme.palette.border.secondary};
+        color: ${props => props.theme.palette.txt.select};
     }
 `;
 
@@ -40,10 +39,10 @@ const Sidebar = () => {
     <SidebarContainer>
         <ul>
             <li>
-                <StyledNavLink to='/'>home</StyledNavLink>
+                <StyledNavLink to='/'>Home</StyledNavLink>
             </li>
             <li>
-                <StyledNavLink to='/theme-change'>temas</StyledNavLink>
+                <StyledNavLink to='/theme-change'>Temas</StyledNavLink>
             </li>
         </ul>
     </SidebarContainer>
