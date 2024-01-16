@@ -2,7 +2,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 export const auroraTheme = createTheme({
   palette: {
-    mode: 'aurora',
     sidebar: {
         main: 'linear-gradient(to bottom, #182830, #285868, #308890, #70b8c8)', 
     },
@@ -43,13 +42,14 @@ export const auroraTheme = createTheme({
     txt: {
         main: '#fff',
         select: '#70b8c8',
+        black: '#000',
+        white: '#fff',
     }
   },
 });
 
 export const deepTheme = createTheme({
   palette: {
-    mode: 'deep ocean',
     sidebar: {
         main: 'linear-gradient(to top, #0d1321, #1d2d44, #3e5c76)', 
     },
@@ -91,13 +91,14 @@ export const deepTheme = createTheme({
     txt: {
         main: '#f0ebd8',
         select: '#748cab',
+        black: '#000',
+        white: '#fff',
     }
   },
 });
 
 export const urbanTheme = createTheme({
   palette: {
-    mode: 'aurora',
     sidebar: {
         main: 'linear-gradient(to top, #8a9c9b, #1e2b32, #030609)', 
     },
@@ -135,18 +136,20 @@ export const urbanTheme = createTheme({
         temanight5: '#a364b8',
     },
     border: {
-        main: '#e48f0f'
+        primary: '#a06a25',
+        secondary: '#e48f0f'
     },
     txt: {
-        main: '#fff',
-        select: '#e48f0f',
+        primary: '#a06a25',
+        secondary: '#e48f0f',
+        black: '#000',
+        white: '#fff',
     }
   },
 });
 
 export const nightTheme = createTheme({
   palette: {
-    mode: 'aurora',
     sidebar: {
         main: 'linear-gradient(to bottom, #0b1333, #191622, #191622, #5344a0)', 
     },
@@ -183,11 +186,14 @@ export const nightTheme = createTheme({
         temaurban5: '#030609',
     },
     border: {
-        main: '#70b8c8'
+        primary: '#5344a0',
+        secondary: '#a364b8',
     },
     txt: {
-        main: '#fff',
-        select: '#a364b8',
+        primary: '#5344a0',
+        secondary: '#a364b8',
+        black: '#000',
+        white: '#fff',
     }
   },
 });
